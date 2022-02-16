@@ -1,0 +1,14 @@
+{
+  "name": "rollup-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/WillianLiusHao/rollup-demo.git",
+  "author": "刘志豪 <zhihaoliu@infinite.net.cn>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "rollup-plugin-json": "^4.0.0"
+  }
+}
