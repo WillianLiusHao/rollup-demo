@@ -1,9 +1,14 @@
+import { track } from './effect'
 
 const createGetter = (isReadonly = false, shallow = false) => {
   return function get(target: any, key: string) {
     const result = Reflect.get(target, key)
     // 依赖收集
     console.log(`获取${key}数据, 收集依赖`);
+    if (!isReadonly) {
+      // 在触发 get 的时候进行依赖收集
+      track(target, "get", key);
+    }
     return result
   }
 }
